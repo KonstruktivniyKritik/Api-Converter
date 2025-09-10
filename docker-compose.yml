@@ -1,0 +1,70 @@
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: api-converter-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./logs:/var/log/nginx
+    depends_on:
+      - client
+      - image-service
+      - stats-service
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: api-converter-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: api-converter-client
+    expose:
+      - "80"
+
+  image-service:
+    build:
+      context: ./services/image-service
+      dockerfile: Dockerfile
+    container_name: api-converter-image
+    environment:
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - SERVICE_NAME=image-service
+    expose:
+      - "8000"
+    depends_on:
+      - rabbitmq
+
+  stats-service:
+    build:
+      context: ./services/stats-service
+      dockerfile: Dockerfile
+    container_name: api-converter-stats
+    environment:
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - SERVICE_NAME=stats-service
+    expose:
+      - "8001"
+    depends_on:
+      - rabbitmq
+
+  format-service:
+    build:
+      context: ./services/format-service
+      dockerfile: Dockerfile
+    container_name: api-converter-format
+    expose:
+      - "8002"
+
+networks:
+  default:
+    name: api-converter-net
+

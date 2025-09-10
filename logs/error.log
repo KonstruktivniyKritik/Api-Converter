@@ -1,0 +1,116 @@
+2025/08/26 19:33:14 [error] 8156#7488: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: your-api-gateway.com, request: "POST /convert/jpg/to/png HTTP/1.1", upstream: "http://[::1]:8001/convert", host: "localhost"
+2025/08/26 19:35:31 [error] 8156#7488: *12 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: your-api-gateway.com, request: "POST /convert/jpg/to/png HTTP/1.1", upstream: "http://[::1]:8001/convert", host: "localhost"
+2025/09/09 06:40:22 [notice] 1#1: using the "epoll" event method
+2025/09/09 06:40:22 [notice] 1#1: nginx/1.25.5
+2025/09/09 06:40:22 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
+2025/09/09 06:40:22 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2025/09/09 06:40:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/09/09 06:40:22 [notice] 1#1: start worker processes
+2025/09/09 06:40:22 [notice] 1#1: start worker process 22
+2025/09/09 06:40:22 [notice] 1#1: start worker process 23
+2025/09/09 06:40:22 [notice] 1#1: start worker process 24
+2025/09/09 06:40:22 [notice] 1#1: start worker process 25
+2025/09/09 06:41:12 [warn] 24#24: *7 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 06:41:15 [error] 24#24: *7 connect() failed (113: Host is unreachable) while connecting to upstream, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", upstream: "http://172.18.0.4:8000/convert", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:05:30 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/09/09 07:05:30 [notice] 22#22: gracefully shutting down
+2025/09/09 07:05:30 [notice] 24#24: gracefully shutting down
+2025/09/09 07:05:30 [notice] 25#25: gracefully shutting down
+2025/09/09 07:05:30 [notice] 23#23: gracefully shutting down
+2025/09/09 07:05:30 [notice] 24#24: exiting
+2025/09/09 07:05:30 [notice] 22#22: exiting
+2025/09/09 07:05:30 [notice] 22#22: exit
+2025/09/09 07:05:30 [notice] 24#24: exit
+2025/09/09 07:05:30 [notice] 25#25: exiting
+2025/09/09 07:05:30 [notice] 23#23: exiting
+2025/09/09 07:05:30 [notice] 25#25: exit
+2025/09/09 07:05:30 [notice] 23#23: exit
+2025/09/09 07:05:30 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2025/09/09 07:05:30 [notice] 1#1: worker process 22 exited with code 0
+2025/09/09 07:05:30 [notice] 1#1: worker process 24 exited with code 0
+2025/09/09 07:05:30 [notice] 1#1: worker process 25 exited with code 0
+2025/09/09 07:05:30 [notice] 1#1: signal 29 (SIGIO) received
+2025/09/09 07:05:30 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2025/09/09 07:05:30 [notice] 1#1: worker process 23 exited with code 0
+2025/09/09 07:05:30 [notice] 1#1: exit
+2025/09/09 07:05:50 [notice] 1#1: using the "epoll" event method
+2025/09/09 07:05:50 [notice] 1#1: nginx/1.25.5
+2025/09/09 07:05:50 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
+2025/09/09 07:05:50 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2025/09/09 07:05:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/09/09 07:05:50 [notice] 1#1: start worker processes
+2025/09/09 07:05:50 [notice] 1#1: start worker process 21
+2025/09/09 07:05:50 [notice] 1#1: start worker process 22
+2025/09/09 07:05:50 [notice] 1#1: start worker process 23
+2025/09/09 07:05:50 [notice] 1#1: start worker process 24
+2025/09/09 07:05:52 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /api/stats/metrics HTTP/1.1", upstream: "http://172.18.0.5:8001/metrics", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:05:53 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /api/stats/metrics HTTP/1.1", upstream: "http://172.18.0.5:8001/metrics", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:05:54 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: _, request: "GET /api/stats/metrics HTTP/1.1", upstream: "http://172.18.0.5:8001/metrics", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:06:02 [warn] 21#21: *1 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:06:05 [error] 21#21: *1 connect() failed (113: Host is unreachable) while connecting to upstream, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", upstream: "http://172.18.0.4:8000/convert", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:06:24 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/09/09 07:06:24 [notice] 21#21: gracefully shutting down
+2025/09/09 07:06:24 [notice] 22#22: gracefully shutting down
+2025/09/09 07:06:24 [notice] 23#23: gracefully shutting down
+2025/09/09 07:06:24 [notice] 24#24: gracefully shutting down
+2025/09/09 07:06:24 [notice] 21#21: exiting
+2025/09/09 07:06:24 [notice] 22#22: exiting
+2025/09/09 07:06:24 [notice] 23#23: exiting
+2025/09/09 07:06:24 [notice] 24#24: exiting
+2025/09/09 07:06:24 [notice] 21#21: exit
+2025/09/09 07:06:24 [notice] 22#22: exit
+2025/09/09 07:06:24 [notice] 23#23: exit
+2025/09/09 07:06:24 [notice] 24#24: exit
+2025/09/09 07:06:24 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2025/09/09 07:06:24 [notice] 1#1: worker process 22 exited with code 0
+2025/09/09 07:06:24 [notice] 1#1: signal 29 (SIGIO) received
+2025/09/09 07:06:24 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/09/09 07:06:24 [notice] 1#1: worker process 21 exited with code 0
+2025/09/09 07:06:24 [notice] 1#1: signal 29 (SIGIO) received
+2025/09/09 07:06:24 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2025/09/09 07:06:24 [notice] 1#1: worker process 24 exited with code 0
+2025/09/09 07:06:24 [notice] 1#1: signal 29 (SIGIO) received
+2025/09/09 07:06:24 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2025/09/09 07:06:24 [notice] 1#1: worker process 23 exited with code 0
+2025/09/09 07:06:24 [notice] 1#1: exit
+2025/09/09 07:07:49 [notice] 1#1: using the "epoll" event method
+2025/09/09 07:07:49 [notice] 1#1: nginx/1.25.5
+2025/09/09 07:07:49 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
+2025/09/09 07:07:49 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2025/09/09 07:07:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/09/09 07:07:49 [notice] 1#1: start worker processes
+2025/09/09 07:07:49 [notice] 1#1: start worker process 22
+2025/09/09 07:07:49 [notice] 1#1: start worker process 23
+2025/09/09 07:07:49 [notice] 1#1: start worker process 24
+2025/09/09 07:07:49 [notice] 1#1: start worker process 25
+2025/09/09 07:08:03 [warn] 22#22: *6 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:08:26 [warn] 22#22: *6 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:36 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:36 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:37 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000005, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:37 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000006, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:38 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000007, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:38 [warn] 23#23: *32 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000008, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:10:39 [warn] 23#23: *41 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000009, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:01 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000010, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:03 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000011, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:03 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000012, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:04 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000013, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:04 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000014, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:05 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000015, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:05 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000016, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/09 07:13:06 [warn] 23#23: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000017, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/10 05:40:56 [notice] 1#1: using the "epoll" event method
+2025/09/10 05:40:56 [notice] 1#1: nginx/1.25.5
+2025/09/10 05:40:56 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
+2025/09/10 05:40:56 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2025/09/10 05:40:56 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/09/10 05:40:56 [notice] 1#1: start worker processes
+2025/09/10 05:40:56 [notice] 1#1: start worker process 20
+2025/09/10 05:40:56 [notice] 1#1: start worker process 21
+2025/09/10 05:40:56 [notice] 1#1: start worker process 22
+2025/09/10 05:40:56 [notice] 1#1: start worker process 23
+2025/09/10 05:45:58 [warn] 20#20: *15 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/10 05:46:01 [warn] 20#20: *21 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/10 05:46:04 [warn] 20#20: *21 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/09/10 05:46:05 [warn] 20#20: *21 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 172.18.0.1, server: _, request: "POST /api/image/convert HTTP/1.1", host: "localhost", referrer: "http://localhost/"
